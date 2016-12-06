@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FootballTeams</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">Log in</string>
+    <string name="usernameerror">Invalid username</string>
+    <string name="passworderror">Invalid password</string>
+    <string name="action_country_teams">Set country</string>
+    <string name="activity_teams_name">Teams</string>
+</resources>
