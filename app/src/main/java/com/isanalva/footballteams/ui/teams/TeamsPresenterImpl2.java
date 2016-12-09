@@ -1,17 +1,18 @@
 package com.isanalva.footballteams.ui.teams;
 
 import com.isanalva.footballteams.domain.FootballTeam;
+import com.isanalva.footballteams.domain.LeagueTeam;
 
 import java.util.List;
 
-public class TeamsPresenterImpl implements TeamsPresenter, TeamsInteractor.OnFinishedListener {
+public class TeamsPresenterImpl2 implements TeamsPresenter2, TeamsInteractor2.OnFinishedListener {
 
-    private TeamsView view;
-    private TeamsInteractor findTeamsInteractor;
+    private TeamsView2 view;
+    private TeamsInteractor2 findTeamsInteractor;
 
-    public TeamsPresenterImpl(TeamsView view) {
+    public TeamsPresenterImpl2(TeamsView2 view) {
         this.view = view;
-        this.findTeamsInteractor = new TeamsInteractorImpl();
+        this.findTeamsInteractor = new TeamsInteractorImpl2();
     }
 
     @Override
@@ -35,14 +36,14 @@ public class TeamsPresenterImpl implements TeamsPresenter, TeamsInteractor.OnFin
     }
 
     @Override
-    public void onFinished(List<FootballTeam> items) {
+    public void onFinished(List<LeagueTeam> items) {
         if (view != null) {
             view.setTeams(items);
             view.hideProgress();
         }
     }
 
-    public TeamsView getMainView() {
+    public TeamsView2 getMainView() {
         return view;
     }
 }

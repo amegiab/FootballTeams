@@ -13,13 +13,14 @@ import android.widget.Toast;
 
 import com.isanalva.footballteams.R;
 import com.isanalva.footballteams.domain.FootballTeam;
+import com.isanalva.footballteams.domain.LeagueTeam;
 
 import java.util.List;
 
-public class TeamsActivity extends Activity implements TeamsView, AdapterView.OnItemClickListener {
+public class TeamsActivity2 extends Activity implements TeamsView2, AdapterView.OnItemClickListener {
 
     private ProgressBar progressBar;
-    private TeamsPresenter presenter;
+    private TeamsPresenter2 presenter;
 
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
@@ -34,7 +35,7 @@ public class TeamsActivity extends Activity implements TeamsView, AdapterView.On
         lManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
         progressBar = (ProgressBar) findViewById(R.id.progress);
-        presenter = new TeamsPresenterImpl(this);
+        presenter = new TeamsPresenterImpl2(this);
     }
 
     @Override
@@ -78,8 +79,8 @@ public class TeamsActivity extends Activity implements TeamsView, AdapterView.On
     }
 
     @Override
-    public void setTeams(List<FootballTeam> items) {
-        adapter = new TeamsAdapter(items);
+    public void setTeams(List<LeagueTeam> items) {
+        adapter = new TeamsAdapter2(items);
         recycler.setAdapter(adapter);
     }
 

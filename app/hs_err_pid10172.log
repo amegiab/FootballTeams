@@ -1,0 +1,153 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=10172, tid=0x0000000000000f34
+#
+# JRE version:  (8.0_76-b03) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.76-b03 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000013cd800):  JavaThread "Unknown thread" [_thread_in_vm, id=3892, stack(0x0000000002b00000,0x0000000002c00000)]
+
+Stack: [0x0000000002b00000,0x0000000002c00000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000013cd800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3892, stack(0x0000000002b00000,0x0000000002c00000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 57344K, used 983K [0x00000000eab00000, 0x00000000eeb00000, 0x0000000100000000)
+  eden space 49152K, 2% used [0x00000000eab00000,0x00000000eabf5c38,0x00000000edb00000)
+  from space 8192K, 0% used [0x00000000ee300000,0x00000000ee300000,0x00000000eeb00000)
+  to   space 8192K, 0% used [0x00000000edb00000,0x00000000edb00000,0x00000000ee300000)
+ ParOldGen       total 131072K, used 0K [0x00000000c0000000, 0x00000000c8000000, 0x00000000eab00000)
+  object space 131072K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c8000000)
+ Metaspace       used 771K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 73K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00000000120c0000,0x00000000122d0000] byte_map_base: 0x0000000011ac0000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000074bc9d00
+ Begin Bits: [0x0000000012c30000, 0x0000000013c30000)
+ End Bits:   [0x0000000013c30000, 0x0000000014c30000)
+
+Polling page: 0x00000000012d0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002d00000, 0x0000000002f70000, 0x0000000011d00000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.261 loading class java/lang/Short
+Event: 0.261 loading class java/lang/Short done
+Event: 0.261 loading class java/lang/Integer
+Event: 0.261 loading class java/lang/Integer done
+Event: 0.261 loading class java/lang/Long
+Event: 0.261 loading class java/lang/Long done
+Event: 0.262 loading class java/lang/NullPointerException
+Event: 0.262 loading class java/lang/NullPointerException done
+Event: 0.262 loading class java/lang/ArithmeticException
+Event: 0.262 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7d78a0000 - 0x00007ff7d78d1000 	C:\Android\Android Studio\jre\bin\java.exe
+0x00007ffaaa6f0000 - 0x00007ffaaa8c1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffaa9ec0000 - 0x00007ffaa9f6b000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffaa7310000 - 0x00007ffaa752d000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffaa91c0000 - 0x00007ffaa9262000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffaaa0b0000 - 0x00007ffaaa14e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffaaa4e0000 - 0x00007ffaaa539000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffaaa550000 - 0x00007ffaaa671000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffaa9330000 - 0x00007ffaa9495000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffaa7aa0000 - 0x00007ffaa7abe000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffaa9c10000 - 0x00007ffaa9c44000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffaa78b0000 - 0x00007ffaa7a32000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa9f5f0000 - 0x00007ffa9f869000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.14393.447_none_42191651c6827bb3\COMCTL32.dll
+0x00007ffaaa210000 - 0x00007ffaaa4d7000 	C:\WINDOWS\System32\combase.dll
+0x00007ffaa7530000 - 0x00007ffaa7625000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffaa7c10000 - 0x00007ffaa7c7a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffaa9190000 - 0x00007ffaa91be000 	C:\WINDOWS\System32\IMM32.DLL
+0x00000000759c0000 - 0x0000000075a92000 	C:\Android\Android Studio\jre\jre\bin\msvcr100.dll
+0x0000000074410000 - 0x0000000074c44000 	C:\Android\Android Studio\jre\jre\bin\server\jvm.dll
+0x00007ffaa9a90000 - 0x00007ffaa9a98000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa8ded0000 - 0x00007ffa8ded9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffaa9df0000 - 0x00007ffaa9e5a000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffaa4c60000 - 0x00007ffaa4c83000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffaa3160000 - 0x00007ffaa316a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffaa4860000 - 0x00007ffaa488b000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffaa72c0000 - 0x00007ffaa7302000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffa99ef0000 - 0x00007ffa99eff000 	C:\Android\Android Studio\jre\jre\bin\verify.dll
+0x00007ffa8bd70000 - 0x00007ffa8bd99000 	C:\Android\Android Studio\jre\jre\bin\java.dll
+0x00007ffa8b680000 - 0x00007ffa8b696000 	C:\Android\Android Studio\jre\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=windows-1252 -Duser.country=ES -Duser.language=es -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --multi-dex --output C:\Datos\android\FootballTeams\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.0.1_84b51a3c4287b44e19040b8a82e764250f8c7423 C:\Datos\android\FootballTeams\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar
+java_class_path (initial): C:\Android\sdk\build-tools\23.0.1\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Java\jdk1.7.0_79
+PATH=C:\Java\jdk1.7.0_79\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\CloudFoundry;C:\Program Files\IBM\Bluemix\bin;C:\Program Files (x86)\Vagrant\bin;C:\Program Files (x86)\OpenSSH\bin;C:\Desarrollo\nodejs\;C:\Java\apache-maven-3.3.9\bin;C:\Ruby193\bin;C:\Ruby22\bin;C:\Program Files (x86)\Google\Chrome\Application;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Git\cmd;C:\Users\Usuario\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Usuario\AppData\Local\Microsoft\WindowsApps;
+USERNAME=Usuario
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 14393 (10.0.14393.0)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 12532964k(2963444k free), swap 12532964k(5760k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.76-b03) for windows-amd64 JRE (1.8.0_76-release-b03), built on Jun 29 2016 19:09:20 by "ralucas" with MS VC++ 10.0 (VS2010)
+
+time: Thu Dec 08 23:50:50 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

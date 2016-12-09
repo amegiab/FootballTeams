@@ -9,6 +9,7 @@
 
     <EditText
         android:id="@+id/username"
+        android:text="user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -18,6 +19,7 @@
         />
     <EditText
         android:id="@+id/password"
+        android:text="pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
