@@ -39,11 +39,11 @@
                 android:id="@+id/team_market_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/team_name"
+                android:layout_alignBottom="@+id/team_name"
                 android:maxLines="3"
                 android:padding="8dp"
-                android:textColor="#666"
-                android:textSize="14dp" />
+                android:textColor="#222"
+                android:textSize="18dp" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

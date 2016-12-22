@@ -25,16 +25,20 @@ public class TeamsAdapter2 extends RecyclerView.Adapter<TeamsAdapter2.TeamViewHo
     private List<LeagueTeam> items;
 
     public static class TeamViewHolder extends RecyclerView.ViewHolder {
-        public ImageView teamPhoto;
 
+        public ImageView teamPhoto;
         public TextView teamName;
-        public TextView teamMarketValue;
+        public TextView teamPoints;
+        public TextView teamGoals;
+        public TextView teamGoalsAgainst;
 
         public TeamViewHolder(View v) {
             super(v);
             teamPhoto = (ImageView) v.findViewById(R.id.team_logo);
             teamName = (TextView) v.findViewById(R.id.team_name);
-            teamMarketValue = (TextView) v.findViewById(R.id.team_market_value);
+            teamGoals = (TextView) v.findViewById(R.id.team_goals);
+            teamPoints = (TextView) v.findViewById(R.id.team_points);
+            teamGoalsAgainst = (TextView) v.findViewById(R.id.team_goals_against);
         }
     }
 
@@ -59,7 +63,8 @@ public class TeamsAdapter2 extends RecyclerView.Adapter<TeamsAdapter2.TeamViewHo
         Picasso.with(FootballTeamsApp.getContext()).load(urlImg).into(viewHolder.teamPhoto);
         String teamNameText = "" + (i + 1) + " - " + items.get(i).getTeamName();
         viewHolder.teamName.setText(teamNameText);
-        String marketValue = "Gole a favor " + items.get(i).getGoals();
-        //viewHolder.teamMarketValue.setText(marketValue);
+        viewHolder.teamPoints.setText("Puntos: " + items.get(i).getPoints());
+        viewHolder.teamGoals.setText("Goles a favor: " + items.get(i).getGoals());
+        viewHolder.teamGoalsAgainst.setText("Goles en contra: " + items.get(i).getGoalsAgainst());
     }
 }

@@ -4,44 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <!--<android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:layout_margin="8dp"
-        card_view:cardBackgroundColor="#ffffff"
-        card_view:cardCornerRadius="8dp">-->
-
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_marginBottom="@dimen/activity_horizontal_margin"
         card_view:cardCornerRadius="5dp"
-        card_view:cardElevation="10dp">
+        card_view:cardElevation="7dp">
 
-        <!--<RelativeLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">-->
-
-            <!--<ImageView
-                android:id="@+id/team_logo"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_alignParentTop="true"
-                android:scaleType="fitCenter"
-                 />-->
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/team_logo"
                 android:layout_width="fill_parent"
-                android:layout_height="150dp"
+                android:paddingTop="60dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter" />
 
             <TextView
                 android:id="@+id/team_name"
                 android:layout_width="fill_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="top"
                 android:alpha="0.8"
                 android:background="#88A69F"
@@ -52,30 +38,39 @@
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/font_title" />
 
-            <!--android:background="#757575"-->
-
-
-            <!--<TextView
-                android:id="@+id/team_name"
+            <TextView
+                android:id="@+id/team_points"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/team_logo"
-                android:maxLines="3"
-                android:padding="8dp"
-                android:textColor="#222"
-                android:textStyle="bold"
-                android:textSize="22dp" />-->
+                android:layout_height="30dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_below="@id/team_logo"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15dp" />
 
             <TextView
-                android:id="@+id/team_market_value"
+                android:id="@+id/team_goals"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/team_name"
-                android:maxLines="3"
-                android:padding="8dp"
-                android:textColor="#666"
-                android:textSize="14dp" />
+                android:layout_height="30dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_below="@id/team_points"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15dp" />
 
-        <!--</RelativeLayout>-->
+            <TextView
+                android:id="@+id/team_goals_against"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_below="@id/team_goals"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 </FrameLayout>
