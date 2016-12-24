@@ -15,7 +15,7 @@ import java.util.Properties;
 public class TeamLogo {
 
     private static TeamLogo teamLogo;
-    private final static String TEAM_LOGOS = "teams_logos2.properties";
+    private final static String TEAM_LOGOS = "teams_logos3.properties";
     private static Properties teamLogosProperties;
 
     private TeamLogo(){

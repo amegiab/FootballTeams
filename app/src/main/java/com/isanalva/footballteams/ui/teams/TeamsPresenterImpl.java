@@ -1,6 +1,6 @@
 package com.isanalva.footballteams.ui.teams;
 
-import com.isanalva.footballteams.domain.FootballTeam;
+import com.isanalva.footballteams.domain.LeagueTeam;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class TeamsPresenterImpl implements TeamsPresenter, TeamsInteractor.OnFin
     }
 
     @Override
-    public void onFinished(List<FootballTeam> items) {
+    public void onFinished(List<LeagueTeam> items) {
         if (view != null) {
             view.setTeams(items);
             view.hideProgress();

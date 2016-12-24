@@ -9,7 +9,6 @@ import android.widget.ProgressBar;
 
 import com.isanalva.footballteams.R;
 import com.isanalva.footballteams.ui.teams.TeamsActivity;
-import com.isanalva.footballteams.ui.teams.TeamsActivity2;
 
 
 public class LoginActivity extends Activity implements LoginView, View.OnClickListener {
@@ -59,7 +58,7 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
 
     @Override
     public void home() {
-        startActivity(new Intent(this, TeamsActivity2.class));
+        startActivity(new Intent(this, TeamsActivity.class));
         finish();
     }
 

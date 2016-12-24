@@ -10,4 +10,8 @@
 
     <string name="backdrop_title">LIGA SANTANDER</string>
     <string name="backdrop_subtitle">Temporada 2016/2017</string>
+
+    <string name="action_players">Jugadores</string>
+    <string name="action_matches">Partidos</string>
+    <string name="action_countries">Paises</string>
 </resources>

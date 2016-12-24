@@ -20,10 +20,6 @@
         </activity>
         <activity
             android:name="com.isanalva.footballteams.ui.teams.TeamsActivity"
-            android:label="@string/activity_teams_name" >
-        </activity>
-        <activity
-            android:name="com.isanalva.footballteams.ui.teams.TeamsActivity2"
             android:label="@string/activity_teams_name"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
