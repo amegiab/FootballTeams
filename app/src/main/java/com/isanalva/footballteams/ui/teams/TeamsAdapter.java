@@ -99,7 +99,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamViewHold
         public boolean onMenuItemClick(MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.action_matches:
-                    Toast.makeText(mContext, "Equipos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Partidos", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.action_players:
                     Toast.makeText(mContext, "Jugadores", Toast.LENGTH_SHORT).show();
