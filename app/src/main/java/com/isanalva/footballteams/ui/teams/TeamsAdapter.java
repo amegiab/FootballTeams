@@ -1,6 +1,7 @@
 package com.isanalva.footballteams.ui.teams;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 import com.isanalva.footballteams.FootballTeamsApp;
 import com.isanalva.footballteams.R;
 import com.isanalva.footballteams.domain.LeagueTeam;
+import com.isanalva.footballteams.ui.players.PlayersActivity;
+import com.isanalva.footballteams.utils.FootballTeamsConsts;
 import com.isanalva.footballteams.utils.TeamLogo;
 import com.squareup.picasso.Picasso;
 
@@ -66,7 +69,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamViewHold
     }
 
     @Override
-    public void onBindViewHolder(final TeamViewHolder viewHolder, int i) {
+    public void onBindViewHolder(final TeamViewHolder viewHolder, final int i) {
         String urlImg = TeamLogo.getInstance().getUrlTeamLogo(items.get(i).getTeamName());
         Picasso.with(FootballTeamsApp.getContext()).load(urlImg).into(viewHolder.teamPhoto);
         String teamNameText = "" + (i + 1) + " " + items.get(i).getTeamName();
@@ -77,22 +80,25 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamViewHold
         viewHolder.overFlow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPopupMenu(viewHolder.overFlow);
+                showPopupMenu(viewHolder.overFlow, items.get(i).getTeamName());
             }
         });
     }
 
-    private void showPopupMenu(View view) {
+    private void showPopupMenu(View view, String teamName) {
         PopupMenu popup = new PopupMenu(mContext, view);
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.menu_teams, popup.getMenu());
-        popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
+        popup.setOnMenuItemClickListener(new MyMenuItemClickListener(teamName));
         popup.show();
     }
 
     class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
 
-        public MyMenuItemClickListener() {
+        private String teamName;
+
+        public MyMenuItemClickListener(String teamName) {
+            this.teamName = teamName;
         }
 
         @Override
@@ -102,7 +108,9 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamViewHold
                     Toast.makeText(mContext, "Partidos", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.action_players:
-                    Toast.makeText(mContext, "Jugadores", Toast.LENGTH_SHORT).show();
+                    Intent playersIntent = new Intent(mContext, PlayersActivity.class);
+                    playersIntent.putExtra(FootballTeamsConsts.INTENT_TEAM_PARAM, teamName);
+                    mContext.startActivity(playersIntent);
                     return true;
                 default:
             }

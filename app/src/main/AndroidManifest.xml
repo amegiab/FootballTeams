@@ -23,6 +23,11 @@
             android:label="@string/activity_teams_name"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name="com.isanalva.footballteams.ui.players.PlayersActivity"
+            android:label="@string/activity_players_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

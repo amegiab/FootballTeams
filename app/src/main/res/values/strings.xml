@@ -7,6 +7,7 @@
     <string name="passworderror">Invalid password</string>
     <string name="action_country_teams">Set country</string>
     <string name="activity_teams_name">Teams</string>
+    <string name="activity_players_name">Players</string>
 
     <string name="backdrop_title">LIGA SANTANDER</string>
     <string name="backdrop_subtitle">Temporada 2016/2017</string>
