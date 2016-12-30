@@ -19,6 +19,7 @@ import com.isanalva.footballteams.domain.LeagueTeam;
 import com.isanalva.footballteams.domain.TeamPlayer;
 import com.isanalva.footballteams.utils.TeamLogo;
 import com.isanalva.footballteams.utils.TeamPlayers;
+import com.isanalva.footballteams.utils.TeamPlayersUrls;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -71,10 +72,10 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
 
     @Override
     public void onBindViewHolder(final PlayerViewHolder viewHolder, int i) {
-        //String urlRonal = "http://files.laliga.es/jugadores/201608/250x250_25114519cristiano-ronaldo.jpg";
-        //Picasso.with(FootballTeamsApp.getContext()).load(urlRonal).into(viewHolder.playerPhoto);
-        Drawable drawablePlayer = getDrawable(TeamPlayers.getInstance().getTeamPlayerImage(teamName,items.get(i).getJerseyNumber()));
-        viewHolder.playerPhoto.setImageDrawable(drawablePlayer);
+        String imagePlayerUrl = TeamPlayersUrls.getInstance().getTeamPlayerImageUrl(teamName,items.get(i).getJerseyNumber());
+        Picasso.with(FootballTeamsApp.getContext()).load(imagePlayerUrl).into(viewHolder.playerPhoto);
+        //Drawable drawablePlayer = getDrawable(TeamPlayers.getInstance().getTeamPlayerImage(teamName,items.get(i).getJerseyNumber()));
+        //viewHolder.playerPhoto.setImageDrawable(drawablePlayer);
         StringBuffer strHeader = new StringBuffer();
         strHeader.append(items.get(i).getJerseyNumber());
         strHeader.append(" - ");
