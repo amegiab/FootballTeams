@@ -72,12 +72,12 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayerVi
 
     @Override
     public void onBindViewHolder(final PlayerViewHolder viewHolder, int i) {
-        String imagePlayerUrl = TeamPlayersUrls.getInstance().getTeamPlayerImageUrl(teamName,items.get(i).getJerseyNumber());
-        Picasso.with(FootballTeamsApp.getContext()).load(imagePlayerUrl).into(viewHolder.playerPhoto);
+        //String imagePlayerUrl = TeamPlayersUrls.getInstance().getTeamPlayerImageUrl(teamName,items.get(i).getJerseyNumber());
+        Picasso.with(FootballTeamsApp.getContext()).load(items.get(i).getUrlPhoto()).into(viewHolder.playerPhoto);
         //Drawable drawablePlayer = getDrawable(TeamPlayers.getInstance().getTeamPlayerImage(teamName,items.get(i).getJerseyNumber()));
         //viewHolder.playerPhoto.setImageDrawable(drawablePlayer);
         StringBuffer strHeader = new StringBuffer();
-        strHeader.append(items.get(i).getJerseyNumber());
+        strHeader.append(items.get(i).getNumber());
         strHeader.append(" - ");
         strHeader.append(items.get(i).getName());
         viewHolder.playerName.setText(strHeader.toString());

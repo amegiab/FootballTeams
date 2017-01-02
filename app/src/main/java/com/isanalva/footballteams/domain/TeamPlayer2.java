@@ -4,16 +4,15 @@ package com.isanalva.footballteams.domain;
  * Created by amegia on 28/12/2016.
  */
 
-public class TeamPlayer {
+public class TeamPlayer2 {
 
     public String name;
     public String position;
-    public int number;
+    public int jerseyNumber;
     public String dateOfBirth;
     public String nationality;
     public String contractUntil;
     public String marketValue;
-    public String urlPhoto;
 
     public String getName() {
         return name;
@@ -31,12 +30,12 @@ public class TeamPlayer {
         this.position = position;
     }
 
-    public int getNumber() {
-        return number;
+    public int getJerseyNumber() {
+        return jerseyNumber;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setJerseyNumber(int jerseyNumber) {
+        this.jerseyNumber = jerseyNumber;
     }
 
     public String getDateOfBirth() {
@@ -69,13 +68,5 @@ public class TeamPlayer {
 
     public void setMarketValue(String marketValue) {
         this.marketValue = marketValue;
-    }
-
-    public String getUrlPhoto() {
-        return urlPhoto;
-    }
-
-    public void setUrlPhoto(String urlPhoto) {
-        this.urlPhoto = urlPhoto;
     }
 }

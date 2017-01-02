@@ -23,7 +23,8 @@ public class FootballTeamApiVolleyClient implements FootballTeamApi {
     private static final String BASE_FOOTBALL_TEAMS_API_URL = "http://api.football-data.org/";
     private static final String GET_FOOTBALL_TEAMS_URL = BASE_FOOTBALL_TEAMS_API_URL + "v1/competitions/TEAM_ID/teams";
     private static final String GET_FOOTBALL_LEAGUE_TABLE = BASE_FOOTBALL_TEAMS_API_URL + "v1/competitions/LEAGUE_ID/leagueTable";
-    private static final String GET_FOOTBALL_TEAM_PLAYERS = BASE_FOOTBALL_TEAMS_API_URL + "v1/teams/TEAM_ID/players";
+    //private static final String GET_FOOTBALL_TEAM_PLAYERS = BASE_FOOTBALL_TEAMS_API_URL + "v1/teams/TEAM_ID/players";
+    private static final String GET_FOOTBALL_TEAM_PLAYERS = "http://10.0.2.2:8080/footballapi/" + "v1/teams/TEAM_ID/players";
 
     @Override
     public void getFootballTeams(String teamId, Context context, Response.Listener<CompetitionTeams> footballTeamsListener,
